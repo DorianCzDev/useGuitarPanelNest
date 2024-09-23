@@ -20,9 +20,9 @@ If you want to know more about a specific project, scroll ⬇️.
 
 **Client:** `Javascript`, `React`
 
-**Database:** `MongoDB`
+**Database:** `PostgreSQL`
 
-**Main Libraries:** `Styled Components`, `Vite`, `Axios`, `TanStack/react-query`, `Recharts`, `React Hook Form`
+**Main Libraries:** `Styled Components`, `Vite`, `Axios`, `TanStack/react-query`, `Recharts`, `React Hook Form`, `TypeORM`
 
 ## `useGuitarPanelNest` Features
 
