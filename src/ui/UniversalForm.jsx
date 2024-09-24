@@ -8,16 +8,10 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { Select } from "./FormSelect";
 
-const defaultValues = {
-  description: "",
-  featured: "",
-  inventory: "",
-};
-
 function UniversalForm({ isWorking, register, product, isEditing, errors }) {
   const { reset } = useForm();
   useEffect(() => {
-    reset(defaultValues);
+    reset();
 
     if (isEditing) {
       reset(product);
@@ -27,8 +21,12 @@ function UniversalForm({ isWorking, register, product, isEditing, errors }) {
   return (
     <>
       <FormRow>
-        <Label id="featured">Featured</Label>
-        <Select name="featured" disabled={isWorking} {...register("featured")}>
+        <Label id="isFeatured">Featured</Label>
+        <Select
+          name="isFeatured"
+          disabled={isWorking}
+          {...register("isFeatured")}
+        >
           <option value={false}>No</option>
           <option value={true}>Yes</option>
         </Select>

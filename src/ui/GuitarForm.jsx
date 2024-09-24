@@ -137,15 +137,15 @@ function GuitarForm({ isWorking, isEditing, product, register, errors }) {
       <FormRow>
         <Label id="pickups">Pickups</Label>
         <Select name="pickups" disabled={isWorking} {...register("pickups")}>
-          <Option value="">No pickups</Option>
-          <Option value="H">H</Option>
-          <Option value="HH">HH</Option>
-          <Option value="HHH">HHH</Option>
-          <Option value="S">S</Option>
-          <Option value="SS">SS</Option>
-          <Option value="SSS">SSS</Option>
-          <Option value="HS">HS</Option>
-          <Option value="HHS">HHS</Option>
+          <Option value={""}>No pickups</Option>
+          <Option value={"H"}>H</Option>
+          <Option value={"HH"}>HH</Option>
+          <Option value={"HHH"}>HHH</Option>
+          <Option value={"S"}>S</Option>
+          <Option value={"SS"}>SS</Option>
+          <Option value={"SSS"}>SSS</Option>
+          <Option value={"HS"}>HS</Option>
+          <Option value={"HHS"}>HHS</Option>
         </Select>
       </FormRow>
       <FormRow>
@@ -204,11 +204,11 @@ function GuitarForm({ isWorking, isEditing, product, register, errors }) {
         />
       </FormRow>
       <FormRow>
-        <Label id="lefthanded">Lefthanded</Label>
+        <Label id="leftHanded">Lefthanded</Label>
         <Select
-          name="lefthanded"
+          name="leftHanded"
           disabled={isWorking}
-          {...register("lefthanded")}
+          {...register("leftHanded")}
         >
           <Option value={false}>No</Option>
           <Option value={true}>Yes</Option>
@@ -216,17 +216,21 @@ function GuitarForm({ isWorking, isEditing, product, register, errors }) {
       </FormRow>
       <FormRow>
         <Label id="tremolo">Tremolo</Label>
-        <Select name="tremolo" disabled={isWorking} {...register("tremolo")}>
+        <Select
+          name="tremolo"
+          disabled={isWorking}
+          {...register("tremolo", { setValueAs: (v) => v === true })}
+        >
           <Option value={false}>No</Option>
           <Option value={true}>Yes</Option>
         </Select>
       </FormRow>
       <FormRow>
-        <Label id="pickupType">Pickup type</Label>
+        <Label id="pickupsType">Pickup type</Label>
         <Select
-          name="pickupType"
+          name="pickupsType"
           disabled={isWorking}
-          {...register("pickupType")}
+          {...register("pickupsType")}
         >
           <Option value={""}>No pickups</Option>
           <Option value={"humbucker"}>Humbucker</Option>
