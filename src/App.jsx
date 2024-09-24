@@ -14,6 +14,7 @@ import Login from "./pages/Login";
 import Deliveries from "./pages/Deliveries";
 import Reviews from "./pages/Reviews";
 import ProtectedRoute from "./ui/ProtectedRoute";
+import { Analytics } from "@vercel/analytics/react";
 
 axios.defaults.withCredentials = true;
 
@@ -50,6 +51,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
       <Toaster
         position="top-center"
         gutter={12}
