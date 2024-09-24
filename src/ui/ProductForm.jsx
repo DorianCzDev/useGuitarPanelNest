@@ -118,12 +118,13 @@ function ProductForm({ setIsOpen, isEditing }) {
           setIsOpen("products");
         },
       });
-    createProduct(data, {
-      onSuccess: () => {
-        reset();
-        setIsOpen("products");
-      },
-    });
+    else
+      createProduct(data, {
+        onSuccess: () => {
+          reset();
+          setIsOpen("products");
+        },
+      });
   }
 
   function onError(errors) {
