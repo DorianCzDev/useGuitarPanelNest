@@ -111,6 +111,7 @@ function ProductForm({ setIsOpen, isEditing }) {
   }, [reset, product, isEditing, formCategory]);
 
   function onSubmit(data) {
+    data.name = data.name.toLowerCase();
     if (isEditing)
       updateProduct(data, {
         onSuccess: () => {
