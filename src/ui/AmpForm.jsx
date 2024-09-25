@@ -186,11 +186,11 @@ function AmpForm({ isWorking, isEditing, product, register, errors }) {
         </Select>
       </FormRow>
       <FormRow>
-        <Label id="effectsProcessor">Effects Processor</Label>
+        <Label id="effectProcessor">Effects Processor</Label>
         <Select
-          name="effectsProcessor"
+          name="effectProcessor"
           disabled={isWorking}
-          {...register("effectsProcessor")}
+          {...register("effectProcessor")}
         >
           <option value={false}>No</option>
           <option value={true}>Yes</option>
