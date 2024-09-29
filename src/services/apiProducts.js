@@ -26,7 +26,7 @@ export async function getProductsApi(sortBy, name, page) {
 export async function getProductApi(isEditing) {
   if (!isEditing) return null;
 
-  let url = `${baseUrl}/products/${isEditing}`;
+  let url = `${baseUrl}/products/panel/${isEditing}`;
   try {
     const response = await axios.get(url);
     return response.data;
